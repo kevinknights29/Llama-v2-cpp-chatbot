@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .  # Directory containing Dockerfile
+      dockerfile: Dockerfile
+    environment:
+      - HOST=0.0.0.0
+      - LISTEN_PORT=8000
+    ports:
+      - "8000:8000"  # Maps port 8000 of the container to port 8000 of the host
